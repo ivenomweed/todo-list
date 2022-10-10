@@ -1,23 +1,10 @@
 import TaskListItem from "./TaskListItem";
-function TaskList({
-	data,
-	handleDeleteTask,
-	handleDoneTask,
-	handleEditTask,
-	handleSaveEditTask,
-}) {
+function TaskList({ data }) {
 	return (
 		<div className="mt-4">
 			<ul className="flex flex-col gap-4">
 				{data.map((taskItem) => (
-					<TaskListItem
-						key={taskItem.id}
-						task={taskItem}
-						handleDeleteTask={handleDeleteTask}
-						handleDoneTask={handleDoneTask}
-						handleEditTask={handleEditTask}
-						handleSaveEditTask={handleSaveEditTask}
-					/>
+					<TaskListItem key={taskItem.id} task={taskItem} />
 				))}
 			</ul>
 		</div>
